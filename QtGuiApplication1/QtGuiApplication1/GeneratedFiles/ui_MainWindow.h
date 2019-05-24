@@ -66,6 +66,8 @@ public:
     QLineEdit *lineEdit_5;
     QLabel *label_8;
     QLineEdit *lineEdit_6;
+    QLineEdit *lineEdit_7;
+    QLabel *label_9;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -231,6 +233,16 @@ public:
 
         formLayout_2->setWidget(3, QFormLayout::FieldRole, lineEdit_6);
 
+        lineEdit_7 = new QLineEdit(groupBox_3);
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+
+        formLayout_2->setWidget(5, QFormLayout::FieldRole, lineEdit_7);
+
+        label_9 = new QLabel(groupBox_3);
+        label_9->setObjectName(QStringLiteral("label_9"));
+
+        formLayout_2->setWidget(5, QFormLayout::LabelRole, label_9);
+
 
         gridLayout_2->addWidget(groupBox_3, 0, 3, 2, 1);
 
@@ -248,6 +260,8 @@ public:
 
         retranslateUi(MainWindowClass);
         QObject::connect(pushButton, SIGNAL(clicked(bool)), MainWindowClass, SLOT(onConnect()));
+        QObject::connect(pushButton_7, SIGNAL(clicked(bool)), MainWindowClass, SLOT(onDisconnect()));
+        QObject::connect(pushButton_3, SIGNAL(clicked(bool)), MainWindowClass, SLOT(onButtonKline()));
 
         QMetaObject::connectSlotsByName(MainWindowClass);
     } // setupUi
@@ -274,12 +288,12 @@ public:
         label_5->setText(QApplication::translate("MainWindowClass", "\345\221\250\346\234\237", Q_NULLPTR));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1Min", Q_NULLPTR)
-         << QApplication::translate("MainWindowClass", "15Min", Q_NULLPTR)
-         << QApplication::translate("MainWindowClass", "30Min", Q_NULLPTR)
-         << QApplication::translate("MainWindowClass", "1Hour", Q_NULLPTR)
-         << QApplication::translate("MainWindowClass", "4Hour", Q_NULLPTR)
-         << QApplication::translate("MainWindowClass", "1Day", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "1min", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "15min", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "30min", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "1hour", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "4hour", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "1day", Q_NULLPTR)
         );
         label_6->setText(QApplication::translate("MainWindowClass", "\351\227\264\351\232\224", Q_NULLPTR));
         comboBox_2->clear();
@@ -292,6 +306,8 @@ public:
         lineEdit_5->setText(QApplication::translate("MainWindowClass", "127.0.0.1", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindowClass", "\347\253\257\345\217\243", Q_NULLPTR));
         lineEdit_6->setText(QApplication::translate("MainWindowClass", "1080", Q_NULLPTR));
+        lineEdit_7->setText(QApplication::translate("MainWindowClass", "btcusdt", Q_NULLPTR));
+        label_9->setText(QApplication::translate("MainWindowClass", "\344\272\244\346\230\223\345\257\271", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -5,6 +5,8 @@
 #include <QWebSocket>
 #include <QNetworkRequest>
 #include <QNetworkProxy>
+#include <zlib.h>
+#include <QByteArray>
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
@@ -16,5 +18,11 @@ public:
 private:
 	Ui::MainWindowClass ui;
 public slots:
-void onConnect();
+	void onConnect();
+	void onRecved(QByteArray barr);
+	void onDisconnect();
+	void onButtonKline();
+private:
+	QByteArray gUncompress(const QByteArray &data);
+
 };

@@ -157,32 +157,32 @@
         <widget class="QComboBox" name="comboBox">
          <item>
           <property name="text">
-           <string>1Min</string>
+           <string>1min</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>15Min</string>
+           <string>15min</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>30Min</string>
+           <string>30min</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>1Hour</string>
+           <string>1hour</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>4Hour</string>
+           <string>4hour</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>1Day</string>
+           <string>1day</string>
           </property>
          </item>
         </widget>
@@ -239,6 +239,20 @@
          </property>
         </widget>
        </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="lineEdit_7">
+         <property name="text">
+          <string>btcusdt</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>交易对</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -285,8 +299,42 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>onDisconnect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>onButtonKline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onConnect()</slot>
+  <slot>onDisconnect()</slot>
+  <slot>onButtonKline()</slot>
  </slots>
 </ui>
