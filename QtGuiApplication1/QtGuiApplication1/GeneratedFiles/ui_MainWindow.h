@@ -24,7 +24,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -49,13 +48,6 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit_3;
     QPushButton *pushButton_14;
-    QGroupBox *groupBox;
-    QFormLayout *formLayout;
-    QLabel *label;
-    QLineEdit *lineEdit;
-    QLabel *label_2;
-    QLineEdit *lineEdit_2;
-    QTextEdit *textEdit;
     QGroupBox *groupBox_3;
     QFormLayout *formLayout_2;
     QLabel *label_5;
@@ -68,6 +60,13 @@ public:
     QLineEdit *lineEdit_6;
     QLineEdit *lineEdit_7;
     QLabel *label_9;
+    QGroupBox *groupBox;
+    QFormLayout *formLayout;
+    QLabel *label;
+    QLineEdit *lineEdit;
+    QLabel *label_2;
+    QLineEdit *lineEdit_2;
+    QWidget *widget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -76,7 +75,7 @@ public:
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QStringLiteral("MainWindowClass"));
-        MainWindowClass->resize(866, 711);
+        MainWindowClass->resize(931, 767);
         centralWidget = new QWidget(MainWindowClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout_2 = new QGridLayout(centralWidget);
@@ -153,40 +152,6 @@ public:
 
         gridLayout_2->addWidget(groupBox_2, 0, 2, 2, 1);
 
-        groupBox = new QGroupBox(centralWidget);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        formLayout = new QFormLayout(groupBox);
-        formLayout->setSpacing(6);
-        formLayout->setContentsMargins(11, 11, 11, 11);
-        formLayout->setObjectName(QStringLiteral("formLayout"));
-        label = new QLabel(groupBox);
-        label->setObjectName(QStringLiteral("label"));
-
-        formLayout->setWidget(0, QFormLayout::LabelRole, label);
-
-        lineEdit = new QLineEdit(groupBox);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-
-        formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
-
-        label_2 = new QLabel(groupBox);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
-
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-
-        formLayout->setWidget(1, QFormLayout::FieldRole, lineEdit_2);
-
-
-        gridLayout_2->addWidget(groupBox, 1, 0, 1, 2);
-
-        textEdit = new QTextEdit(centralWidget);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-
-        gridLayout_2->addWidget(textEdit, 2, 0, 1, 4);
-
         groupBox_3 = new QGroupBox(centralWidget);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         formLayout_2 = new QFormLayout(groupBox_3);
@@ -246,10 +211,49 @@ public:
 
         gridLayout_2->addWidget(groupBox_3, 0, 3, 2, 1);
 
+        groupBox = new QGroupBox(centralWidget);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        formLayout = new QFormLayout(groupBox);
+        formLayout->setSpacing(6);
+        formLayout->setContentsMargins(11, 11, 11, 11);
+        formLayout->setObjectName(QStringLiteral("formLayout"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QStringLiteral("label"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, label);
+
+        lineEdit = new QLineEdit(groupBox);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
+
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
+
+        lineEdit_2 = new QLineEdit(groupBox);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, lineEdit_2);
+
+
+        gridLayout_2->addWidget(groupBox, 1, 0, 1, 2);
+
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(1);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(widget, 2, 0, 1, 4);
+
         MainWindowClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindowClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 866, 23));
+        menuBar->setGeometry(QRect(0, 0, 931, 23));
         MainWindowClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindowClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -281,9 +285,6 @@ public:
         pushButton_13->setText(QApplication::translate("MainWindowClass", "Orders", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindowClass", "\346\214\207\344\273\244", Q_NULLPTR));
         pushButton_14->setText(QApplication::translate("MainWindowClass", "Account List", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MainWindowClass", "\347\224\250\346\210\267", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindowClass", "ACCESS KEY", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindowClass", "SRCUTITY KEY", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("MainWindowClass", "\345\217\202\346\225\260", Q_NULLPTR));
         label_5->setText(QApplication::translate("MainWindowClass", "\345\221\250\346\234\237", Q_NULLPTR));
         comboBox->clear();
@@ -308,6 +309,9 @@ public:
         lineEdit_6->setText(QApplication::translate("MainWindowClass", "1080", Q_NULLPTR));
         lineEdit_7->setText(QApplication::translate("MainWindowClass", "btcusdt", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindowClass", "\344\272\244\346\230\223\345\257\271", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindowClass", "\347\224\250\346\210\267", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindowClass", "ACCESS KEY", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindowClass", "SRCUTITY KEY", Q_NULLPTR));
     } // retranslateUi
 
 };
